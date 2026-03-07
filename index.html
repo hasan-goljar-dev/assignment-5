@@ -28,6 +28,13 @@
       font-family: "Outfit", sans-serif;
     }
   </style>
+  <script>
+const isLoggedIn = localStorage.getItem("isLoggedIn");
+
+if (!isLoggedIn) {
+  window.location.href = "login.html";
+}
+</script>
 
 </head>
 
