@@ -6,7 +6,7 @@ document.getElementById("btn-login")
         const  password= inputPassword.value;
         if (username == "admin" && password == "admin123") {
             alert("Login Successful");
-            window.location.assign("./Home.html")
+            window.location.assign("./home.html")
         }
         else {
             alert("Login Failed");
