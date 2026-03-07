@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub | Login</title>
+
+<!-- DaisyUI + Tailwind -->
+<link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+<!-- Google Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+crossorigin="anonymous"
+referrerpolicy="no-referrer" />
+
+<link rel="shortcut icon" href="./assets/github-logo.png">
+
+<style>
+*{
+font-family: "Outfit", sans-serif;
+}
+</style>
+
+</head>
+
+<body class="min-h-screen bg-base-200 flex items-center justify-center px-4">
+
+<div class="w-full max-w-md">
+
+<!-- Logo -->
+<div class="mb-6">
+<img src="./assets/github-logo.png" class="w-16 mx-auto" alt="logo">
+</div>
+
+<!-- Title -->
+<div class="mb-6 text-center">
+<h1 class="text-2xl font-bold">GitHub Issues Tracker</h1>
+<p class="text-sm text-gray-500">Sign in to manage your issues</p>
+</div>
+
+<!-- Login Card -->
+<div class="card bg-base-100 shadow-md">
+<div class="card-body">
+
+<label class="label font-semibold">Username</label>
+<input id="username" type="text"
+placeholder="Enter Username"
+class="input input-bordered w-full" />
+
+<label class="label font-semibold mt-3">Password</label>
+<input id="password" type="password"
+placeholder="Enter Password"
+class="input input-bordered w-full" />
+
+<button id="btn-login" class="btn btn-primary w-full mt-4">
+Sign In
+</button>
+
+</div>
+</div>
+
+<!-- OR Divider -->
+<div class="flex items-center my-6">
+<div class="flex-1 border-t border-gray-300"></div>
+
+<span class="px-3 text-sm font-semibold text-gray-500">
+OR
+</span>
+
+<div class="flex-1 border-t border-gray-300"></div>
+</div>
+
+<!-- Demo Credentials Card -->
+<div class="card  mb-4">
+<div class=" text-center p-4">
+<p class="text-sm text-gray-500">Demo Credentials</p>
+</div>
+</div>
+
+<div class="card bg-base-100 shadow-md">
+<div class="card-body text-center">
+
+<p class="text-lg">
+<span class="font-bold">Username:</span> admin
+</p>
+
+<p class="text-lg">
+<span class="font-bold">Password:</span> admin123
+</p>
+
+</div>
+</div>
+
+</div>
+
+<script src="script/login.js"></script>
+
+</body>
+
+</html>
