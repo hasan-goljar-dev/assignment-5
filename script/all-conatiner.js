@@ -32,8 +32,8 @@ const displayIssues = (issues) => {
             <div class="flex justify-between items-center">
             <span class="flex items-center gap-1">
               <img class="w-6 h-6" src="${issue.status === 'open' ?
-                './assets/Open-Status.png' :
-                './assets/Closed-Status.png'}" alt=""></span>
+                '../assets/Open-Status.png' :
+                '../assets/Closed-Status.png'}" alt=""></span>
                 <span class="badge ${issue.priority === 'high'
                 ? 'badge-error'
                 : issue.priority === 'medium'
