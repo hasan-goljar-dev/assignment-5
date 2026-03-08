@@ -28,7 +28,7 @@ const displayIssues = (issues) => {
         const cardDiv = document.createElement("div");
 
         cardDiv.innerHTML = `
-        <div class="bg-base-100 shadow rounded-xl p-4 space-y-3">
+        <div class="issue-card bg-base-100 shadow rounded-xl p-4 space-y-3">
             <div class="flex justify-between items-center">
             <span class="flex items-center gap-1">
               <img class="w-6 h-6" src="${issue.status === 'open' ?
@@ -47,8 +47,8 @@ const displayIssues = (issues) => {
                 ${issue.title}
             </h2>
 
-            <p class="text-sm text-gray-500">
-                ${issue.description}
+            <p class="text-sm text-gray-500 line-clamp-2">
+                ${issue.description}..
             </p>
 
             <div class="flex gap-2">
@@ -56,8 +56,9 @@ const displayIssues = (issues) => {
             </div>
 
             <div class="border-t pt-2 text-xs text-gray-500">
-                <p># by ${issue.author}</p>
+                <p> #${issue.id}  by ${issue.author}</p>
                 <p>${new Date(issue.createdAt).toLocaleDateString()}</p>
+
             </div>
 
         </div>
@@ -114,6 +115,8 @@ function switchTab(select) {
 tabs.forEach(tab => {
     document.getElementById("Select-" + tab).onclick = () => switchTab(tab);
 });
+// modal
+
 
 switchTab("all");
 

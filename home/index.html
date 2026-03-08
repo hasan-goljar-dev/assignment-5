@@ -21,7 +21,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- Favicon -->
-  <link rel="shortcut icon" href="./assets/github-logo.png">
+  <link rel="shortcut icon" href="../assets/github-logo.png">
 
   <style>
     * {
@@ -38,7 +38,7 @@
 
       <div class="flex-1">
         <div class="flex items-center gap-3">
-          <img class="w-12" src="./assets/github-logo.png" alt="">
+          <img class="w-12" src="../assets/github-logo.png" alt="">
           <a class="text-2xl font-bold">GitHub Issues Tracker</a>
         </div>
       </div>
@@ -60,7 +60,7 @@
         </label>
 
         <button id="search-btn" class="btn btn-primary join-item">
-          <img class="w-4" src="./assets/Plus.png" alt="">
+          <img class="w-4" src="../assets/Plus.png" alt="">
           New Issue
         </button>
 
@@ -86,19 +86,19 @@
     <div class="flex justify-between items-center">
 
       <div class="flex items-center gap-3">
-        <img class="w-10 border-2 border-blue-300/50 rounded-full p-1" src="./assets/Aperture.png" alt="">
+        <img class="w-10 border-2 border-blue-300/50 rounded-full p-1" src="../assets/Aperture.png" alt="">
         <div>
           <p class="font-bold"> <span id="issue-count">0</span> Issues</p>
-          <p class="text-sm text-gray-500">Track and manage your project issues</p>
+          <p class="text-sm text-gray-500 ">Track and manage your project issues</p>
         </div>
       </div>
 
       <div class="flex gap-1 text-sm">
         <span class="flex items-center gap-2">
-          <span class="w-6 h-6 "></span>Open<img src="./assets/Open-Status.png" alt="">
+          <span class="w-6 h-6 "></span>Open<img src="../assets/Open-Status.png" alt="">
         </span>
         <span class="flex items-center gap-2">
-          <span class="w-6 h-6 "></span>Closed<img src="./assets/Closed-Status.png" alt="">
+          <span class="w-6 h-6 "></span>Closed<img src="../assets/Closed-Status.png" alt="">
         </span>
       </div>
 
@@ -115,6 +115,18 @@
   <section id="closed-container"
     class="max-w-[80%] mx-auto mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 hidden">
   </section>
+  <!-- Modal -->
+   <!-- You can open the modal using ID.showModal() method -->
+<button class="btn" onclick="my_modal_3.showModal()">open modal</button>
+<dialog id="my_modal_3" class="modal">
+  <div class="modal-box">
+    <form method="dialog">
+      <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+    </form>
+    <h3 class="text-lg font-bold">Hello!</h3>
+    <p class="py-4">Press ESC key or click on ✕ button to close</p>
+  </div>
+</dialog>
 
   <script src="../script/all-conatiner.js"></script>
 </body>
