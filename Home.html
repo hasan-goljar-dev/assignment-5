@@ -73,41 +73,50 @@
   <!-- Select Buttons -->
   <section class="bg-base-200 shadow max-w-[80%] mx-auto mt-4 p-4">
 
-    <button id="Select-all" class="btn btn-primary">All</button>
-    <button id="Select-open" class="btn btn-neutral btn-outline">Open</button>
-    <button id="Select-closed" class="btn btn-neutral btn-outline">Closed</button>
+    <button id="Select-all" onclick="switchTab('all')"
+      class="px-5 py-1.5 rounded-full border-2 text-sm font-medium cursor-pointer transition-all duration-200">All</button>
+    <button id="Select-open" onclick="switchTab('open')"
+      class="px-5 py-1.5 rounded-full border-2 text-sm font-medium cursor-pointer transition-all duration-200">Open</button>
+    <button id="Select-closed" onclick="switchTab('closed')"
+      class="px-5 py-1.5 rounded-full border-2 text-sm font-medium cursor-pointer transition-all duration-200">Closed</button>
 
   </section>
   <!-- Issue Counter Section -->
   <section class="bg-base-200 max-w-[80%] mx-auto p-4 mt-3 rounded-lg">
-  <div class="flex justify-between items-center">
+    <div class="flex justify-between items-center">
 
-    <div class="flex items-center gap-3">
-      <img class="w-10 border-2 border-blue-300/50 rounded-full p-1" src="./assets/Aperture.png" alt="">
-      <div>
-        <p class="font-bold">50 Issues</p>
-        <p class="text-sm text-gray-500">Track and manage your project issues</p>
+      <div class="flex items-center gap-3">
+        <img class="w-10 border-2 border-blue-300/50 rounded-full p-1" src="./assets/Aperture.png" alt="">
+        <div>
+          <p class="font-bold"> <span id="issue-count">0</span> Issues</p>
+          <p class="text-sm text-gray-500">Track and manage your project issues</p>
+        </div>
       </div>
-    </div>
 
-    <div class="flex gap-1 text-sm">
-      <span class="flex items-center gap-2">
-        <span class="w-6 h-6 "></span>Open<img src="./assets/Open-Status.png" alt="">
-      </span>
-      <span class="flex items-center gap-2">
-        <span class="w-6 h-6 "></span>Closed<img src="./assets/Closed-Status.png" alt="">
-      </span>
-    </div>
+      <div class="flex gap-1 text-sm">
+        <span class="flex items-center gap-2">
+          <span class="w-6 h-6 "></span>Open<img src="./assets/Open-Status.png" alt="">
+        </span>
+        <span class="flex items-center gap-2">
+          <span class="w-6 h-6 "></span>Closed<img src="./assets/Closed-Status.png" alt="">
+        </span>
+      </div>
 
-  </div>
-</section>
+    </div>
+  </section>
   <!-- All Cards -->
-  <section>
-    <section id="all-container"  class="max-w-[80%] mx-auto mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-  
-</section>
- 
-<script src="script/all-conatiner.js"></script>
+  <section id="all-container"
+    class="max-w-[80%] mx-auto mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 hidden">
+  </section>
+  <section id="open-container"
+    class="max-w-[80%] mx-auto mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 hidden">
+  </section>
+
+  <section id="closed-container"
+    class="max-w-[80%] mx-auto mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 hidden">
+  </section>
+
+  <script src="script/all-conatiner.js"></script>
 </body>
 
 </html>
