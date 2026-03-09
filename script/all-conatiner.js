@@ -207,7 +207,6 @@ document.getElementById("search-btn").addEventListener("click", () => {
             setTimeout(() => {
                 const results = data.data;
                 displayIssues(results);
-                updateIssueCount(results);
                 manageSpinner(false);
             }, 800);
         })
