@@ -3,6 +3,15 @@ const createElements = (arr) => {
         `<span class="badge badge-warning badge-outline">${el}</span>`
     ).join("");
 };
+const manageSpinner = (status) => {
+    const spinner = document.getElementById("spinner");
+
+    if (status) {
+        spinner.classList.remove("hidden");
+    } else {
+        spinner.classList.add("hidden");
+    }
+};
 let issuesData = [];
 const allContainer = document.getElementById("all-container");
 const openContainer = document.getElementById("open-container");
@@ -24,15 +33,7 @@ const allIssues = () => {
             }, 800);
         });
 };
-const manageSpinner = (status) => {
-    const spinner = document.getElementById("spinner");
 
-    if (status) {
-        spinner.classList.remove("hidden");
-    } else {
-        spinner.classList.add("hidden");
-    }
-};
 const displayIssues = (issues) => {
     manageSpinner(true)
     allContainer.innerHTML = "";
